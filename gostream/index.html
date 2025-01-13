@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch Movies Online for Free at Gostream</title>
+  <meta name="robots" content="nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://w3--gostream.pages.dev/Gostream/Gostream-icon.png" />
+  <style>
+  body {
+    margin: 0;
+    background: #000;
+  }
+a#logo {
+  position: fixed;
+  z-index: 1;
+  background: #1A1A1A;
+  padding: 14.5px;
+  left: 160px;
+  min-width: 230px;
+}
+  .pc {
+    width: 130px;
+  }
+  iframe#main-iframe {
+    width: calc(100vw - 320px);
+    height: 100vh;
+    display:block;
+    margin: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .banner-ngang {
+    position: fixed;
+    left: 50%;  
+    transform:translateX(-50%); 
+    bottom: 0;
+        max-width: 728px;
+  }
+  .ngang-mobi{
+    display: none;
+  }
+  .banner-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform:translateY(-50%);
+  }
+  .banner-sidebar.banner-right {
+    right: 0;
+    left: auto;
+  }
+  .centertt {
+  top: 40%;
+}
+ /* @media only screen and (max-width: 1200px) {
+    a#logo {
+      background: linear-gradient(90deg, #1b2229, #1b2229, #1b2229, transparent);
+      min-width: 400px;
+    }
+  }*/
+
+  @media only screen and (max-width: 1000px) {
+    a#logo {
+    left: 0;
+    min-width: 234px;
+  }
+    iframe#main-iframe {
+      width: 100vw;
+    }
+    .banner-sidebar {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 728px) {
+
+    .banner-ngang {
+      display: none;
+    }
+    .ngang-mobi{
+      display: block;
+    }
+    a#logo {
+      height: 85px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+
+    }
+    .banner-ngang.banner_wrapper.centertt{
+      display: block;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+
+  <iframe id="main-iframe" src="https://v4.freemovies.homes/?logo=https://w3--gostream.pages.dev/Gostream/Gostream-logo.png&blog_name=Gostream" frameborder="0" allowfullscreen></iframe>
+
+  <div class="banner-ngang banner_wrapper ngang-pc"> <!-- banner ngang cho PC -->
+<script type="text/javascript">
+    atOptions = {
+        'key' : '024def9fc6d8259161198701738f567e',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+    };
+</script>
+<script type="text/javascript" src="//smellyla.com/024def9fc6d8259161198701738f567e/invoke.js"></script>
+  </div>
+
+  <div class="banner-ngang banner_wrapper ngang-mobi"> <!-- banner ngang cho mobi -->
+<script type="text/javascript">
+    atOptions = {
+        'key' : 'fb111c1fc8229fff187c65e8fa0f0f15',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+    };
+</script>
+<script type="text/javascript" src="//smellyla.com/fb111c1fc8229fff187c65e8fa0f0f15/invoke.js"></script>
+  </div>
+
+
+  <div class="banner-sidebar banner_wrapper banner-left"> <!-- banner dọc trái -->
+<script type="text/javascript">
+    atOptions = {
+        'key' : '11dce8ab20f20cdbef144f8a766bf11b',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+    };
+</script>
+<script type="text/javascript" src="//smellyla.com/11dce8ab20f20cdbef144f8a766bf11b/invoke.js"></script>
+  </div>
+
+  <div class="banner-sidebar banner_wrapper banner-right"> <!-- banner dọc phải -->
+<script type="text/javascript">
+    atOptions = {
+        'key' : '09e65279ef91499635a850440876ce90',
+        'format' : 'iframe',
+        'height' : 300,
+        'width' : 160,
+        'params' : {}
+    };
+</script>
+<script type="text/javascript" src="//smellyla.com/09e65279ef91499635a850440876ce90/invoke.js"></script>
+  </div>
+
+
+  <script>
+    // Lấy tất cả các phần tử có class là "banner_wrapper"
+    var bannerWrappers = document.querySelectorAll('.banner_wrapper');
+
+    // Duyệt qua từng phần tử và chèn nút X vào mỗi phần tử
+    bannerWrappers.forEach(function(bannerWrapper) {
+    // Tạo một phần tử button
+    var xButton = document.createElement('button');
+
+    // Thêm nội dung cho nút X (có thể thay đổi nếu bạn muốn)
+    xButton.innerHTML = '&times;';
+
+    // Tạo kiểu cho nút X để làm đẹp
+    xButton.style.position = 'absolute';
+    xButton.style.top = '0'; // Có thể điều chỉnh khoảng cách từ trên xuống
+    xButton.style.right = '0'; // Có thể điều chỉnh khoảng cách từ phải sang trái
+    xButton.style.padding = '0 5px'; // Có thể điều chỉnh kích thước nút
+    xButton.style.border = 'none';
+    xButton.style.backgroundColor = '#ffffff'; // Màu nền trắng
+    xButton.style.color = '#000'; // Màu chữ xanh đậm
+    xButton.style.fontWeight = 'bold';
+    xButton.style.fontSize = '25px'; // Cỡ chữ
+    xButton.style.lineHeight = '24px'; // line-height
+    xButton.style.cursor = 'pointer';
+    xButton.style.boxShadow = 'rgb(0, 0, 0) 0px 2px 4px';
+    xButton.style.borderRadius = '2px';
+    xButton.style.transition = 'background-color 0.3s'; // Hiệu ứng hoạt hình
+
+    // Tạm ẩn nút X và xuất hiện sau 3s
+    xButton.style.display = 'none';
+    setTimeout(function() {
+      xButton.style.display = 'block';
+    }, 3000);
+
+    // Hiệu ứng hoạt hình khi hover
+    xButton.addEventListener('mouseover', function() {
+    xButton.style.backgroundColor = '#e0e0e0'; // Màu nền xám nhạt
+  });
+
+    xButton.addEventListener('mouseout', function() {
+    xButton.style.backgroundColor = '#ffffff'; // Màu nền trắng
+  });
+
+    // Gán sự kiện click cho nút X để ẩn phần tử khi được nhấp
+    xButton.addEventListener('click', function() {
+    // Duyệt qua tất cả các phần tử có class "banner_wrapper" và ẩn chúng
+    bannerWrappers.forEach(function(banner) {
+      banner.style.display = 'none';
+    });
+  });
+
+    // Chèn nút X vào phần tử "banner_wrapper"
+    bannerWrapper.appendChild(xButton);
+  });
+</script>
+</body>
+</html>
