@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3Juices - Free MP3 Downloader - MP3 Juice</title>
+  <meta name="description" content="MP3Juices is a free MP3 Search Engine with a built-in downloader. Simply search and download your favorite music as MP3 or MP4 files with MP3Juice.">
+  <meta name="robots" content="index, follow">
+  <link rel="shortcut icon" href="index_files/icon.png" type="image/x-icon">
+  <meta property="og:image" content="./images/banner.jpg">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #293a46;
+  }
+  header {
+    text-align: center;
+    max-width: 890px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  article {
+    max-width: 890px;
+    margin: auto;
+    padding: 30px 7.5px;
+    box-sizing: border-box;
+  }
+
+  ul#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  ul#menu li {
+    padding: 24px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+    color: #293a46;
+    cursor: pointer;
+  }
+
+  ul#menu li:hover {
+    background: #eee;
+    color: #c10841;
+  }
+
+  #logo {
+    color: #293a46;
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  #logo img {
+    margin-right: 10px;
+  }
+
+  section {
+    max-width: 890px;
+    margin: 0 auto;
+    background: #fff;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  #search-form {
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 36px auto 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input#txt-url {
+    width: calc(100% - 120px);
+    padding: 0 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: solid 5px #1382e4;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0;
+  }
+  input#txt-url:focus-visible {
+    outline: none;
+  }
+  input#txt-url::placeholder{
+    color: #999;
+  }
+  .w-submit{
+    background: #1382e4;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 60px;
+    width: 120px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border: none;
+    color: #fff;
+  }
+  p.w-submit img {
+    width: 15px;
+    height: 11px;
+  }
+  .w-submit:hover {
+    background: #307dc2;
+  }
+  input[type="submit"] {
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p.small {
+    font-size: 13px;
+    text-align: center;
+    color: #666;
+    padding: 6px;
+    margin: 0 auto 66px;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+  }
+  h2{
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+  .aligncenter{
+    text-align: center;
+  }
+  hr:before{
+    background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center, rgba(0, 0, 0, 0.2) 0px, rgba(255, 255, 255, 0) 75%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -40%;
+    position: absolute;
+    width: 80%;
+  }
+  hr{
+    padding: 1px;
+    position: relative;
+    border: none;
+    margin: 30px 0;
+  }
+  footer {
+    border-top: solid 1px #dcdfe4;
+    text-align: center;
+    color: #293a46;
+    padding: 15px;
+    font-size: small;
+  }
+
+  article ul {
+    padding-left: 17px;
+  }
+
+  article li {
+    margin-bottom: 15px;
+  }
+  article a {
+    color: #1382e4;
+    font-weight: bold;
+  }
+
+  #ipdro {
+    margin: 40px auto;
+    width: 412px;
+    border-radius: 2px;
+    display: flex;
+    width: 440px;
+    padding: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .w-submit img {
+    margin-left: 5px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    ul#menu {
+      display: none;
+    }
+
+    header {
+      padding: 9px 0;
+      justify-content: center;
+    }
+
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive table */
+  @media (max-width: 600px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+      position: relative;
+      padding-left: 50%;
+    }
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  blockquote {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #1382e4; 
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <img src="index_files/icon.png" width="32" height="32" alt="logo">
+      mp3juices.baby
+    </div>
+
+    <ul id="menu">
+      <li onclick="window.open('https://ww1.lat/converts/', '_blank')">YouTube Downloader</li>
+      <li onclick="window.open('https://ww1.lat/converts/', '_blank')">YouTube Converter</li>
+      <li onclick="window.open('https://ww1.lat/converts/', '_blank')">YouTube to MP3</li>
+      <li onclick="window.open('https://ww1.lat/converts/', '_blank')">English</li>
+    </ul>
+
+  </header>
+
+  <h1>MP3Juices - Free MP3 Downloader - MP3 Juice</h1>
+  <form id="search-form" action="https://ww1.lat/test/" method="get">
+    <input class="form-control input-lg" id="txt-url" name="query" type="text" placeholder="Search or paste link here..." autocomplete="off" required="">
+    <button class="w-submit" type="submit" form="search-form" value="Start">Start <img src="index_files/right.png" alt="icon"></button>
+  </form>
+  <p class="small">By using our service you are accepting our Terms of Use.</p>
+
+  <article>
+
+ <p class="small">By using our service you are accepting our Terms of Use.</p>
+  </article>
+
+  <footer><p>Copyright © 2025 mp3juices.baby</p></footer>
+
+
+
+
+</body></html>
