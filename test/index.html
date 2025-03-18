@@ -140,7 +140,8 @@
 <script>
     window.onload = function() {
         // Lấy giá trị từ trường nhập liệu (form) với id "search-input"
-        var keyword = document.getElementById("search-input").value;
+        //var keyword = document.getElementById("search-input").value;
+        var keyword = getQueryVariable("query");
 
         // Kiểm tra xem từ khóa có tồn tại không
         if (keyword) {
