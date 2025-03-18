@@ -10,7 +10,7 @@
     <style>
     body {
         margin: 0;
-        background: #f9f9f9;
+        background: #1676c2;
     }
 /*    body:before {
         content: "";
@@ -94,7 +94,7 @@
     z-index: 1;
     }*/
     .banner-sidebar.banner-right{
-        background: #f9f9f9;
+        background: #1676c2;
     }
     .banner-sidebar.banner-right iframe {
         z-index: 2;
@@ -137,8 +137,7 @@
 
     </div>
     
-    <script>
-
+<script>
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
@@ -150,59 +149,16 @@
         }
         return null;
     }
-
-
-    function isYouTubeUrl(url) {
-        return (url.includes('youtube.com') || url.includes('youtu.be'));
-    }
-
-
-    function getYouTubeVideoId(url) {
-        var video_id = null;
-        if (url.includes('youtube.com')) {
-            var urlParams = new URLSearchParams(new URL(url).search);
-            video_id = urlParams.get('v');
-        } else if (url.includes('youtu.be')) {
-            video_id = url.split('/').pop();
-        }
-        return video_id;
-    }
-
-
     window.onload = function() {
         var keyword = getQueryVariable("query");
-        var type = getQueryVariable("type");
-        var iframe_url = "";
 
         if (keyword) {
-            if (type === "mp3" || !type) {
-
-                if (isYouTubeUrl(keyword)) {
-                    var video_id = getYouTubeVideoId(keyword);
-                    if (video_id) {
-                        iframe_url = "https://www.y2mate.com/youtube-mp3/" + video_id;
-                    }
-                } else {
-                    iframe_url = "https://www.y2mate.com/youtube-mp3/search/" + encodeURIComponent(keyword);
-                }
-            } else if (type === "mp4") {
-
-                if (isYouTubeUrl(keyword)) {
-                    var video_id = getYouTubeVideoId(keyword);
-                    if (video_id) {
-                        iframe_url = "https://www.y2mate.com/youtube/" + video_id;
-                    }
-                } else {
-                    iframe_url = "https://www.y2mate.com/search/" + encodeURIComponent(keyword);
-                }
-            }
-
+            var iframe_url = "https://learnerprofiler.co.za/search/" + encodeURIComponent(keyword);
 
             document.getElementById("main-iframe").src = iframe_url;
         }
     }
-    </script>
-    <div class="header-fixel"><img src="https://mp3juices.com.im/images/logo.png"></div>
+</script>
     <iframe id="main-iframe" frameborder="0" ></iframe>
     
     <div class="banner-ngang banner_wrapper ngang-pc">
